@@ -1,5 +1,5 @@
 # Use Node base image
-FROM node:18
+FROM node:latest
 
 # Create app directory inside container
 WORKDIR /app
