@@ -1,9 +1,9 @@
-FROM eclipse-temurin:8-jdk-ubi10-minimal
+FROM openjdk:27-ea-jdk-slim
 
 WORKDIR /app
 
 # Copy jar built by Jenkins pipeline
 COPY target/*.jar app.jar
 
-EXPOSE 3000
+EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
