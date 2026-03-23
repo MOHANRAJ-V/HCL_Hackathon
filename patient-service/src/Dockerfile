@@ -4,7 +4,9 @@ FROM node:latest
 WORKDIR /app
 
 # Copy your JS file
-COPY index.js .
+COPY src/index.js .
+
+RUN npm install
 
 # Expose port (change if needed)
 EXPOSE 3002
